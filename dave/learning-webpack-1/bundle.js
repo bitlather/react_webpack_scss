@@ -67,6 +67,7 @@
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
+//require("./style.css");
 __webpack_require__(1);
 document.write(__webpack_require__(5));
 
@@ -86,8 +87,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!./style.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!./style.css");
+		module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/lib/loader.js!./main.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -105,7 +106,7 @@ exports = module.exports = __webpack_require__(3)();
 
 
 // module
-exports.push([module.i, "body {\n    background: yellow;\n}", ""]);
+exports.push([module.i, "body p {\n  color: blue; }\n\nbody a {\n  color: magenta; }\n", ""]);
 
 // exports
 
@@ -422,7 +423,7 @@ function updateLink(linkElement, obj) {
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports = "It works from content.js.";
+module.exports = "<body><p>It works from content.js.</p><a href='#'>link</a></body>";
 
 /***/ })
 /******/ ]);

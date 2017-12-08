@@ -1,1 +1,1 @@
-module.exports = "It works from content.js.";
+module.exports = "<body><p>It works from content.js.</p><a href='#'>link</a></body>";
